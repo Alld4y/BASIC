@@ -16,5 +16,6 @@ int main() {
     } else if ( score < 50 ){ // Grade F
         printf("Grade F\n");
     } // end if-else chain
+    
     return 0;
 }
