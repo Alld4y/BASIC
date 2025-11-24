@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 // Lab101: Print "Hello Loop!" N times or "Error" if N is non-positive or 0
-
 int main () {
     int N,i;
     if( scanf("%d", &N) > 0 && N > 0 ) {
