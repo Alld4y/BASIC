@@ -9,16 +9,20 @@ int main () {
         switch ( operationCode ) {
             case 1 : // Addition
                 result = num1 + num2;
+                printf("%d\n", result);
                 break;
             case 2 : // Subtraction
                 result = num1 - num2;
+                printf("%d\n", result);
                 break;
             case 3 : // Multiplication
                 result = num1 * num2;
+                printf("%d\n", result);
                 break;
             case 4 : // Division
                 if ( num2 != 0 ) {
                     result = num1 / num2;
+                    printf("%d\n", result);
                 } else {
                     return 1;
                 } // end if-else
@@ -26,7 +30,6 @@ int main () {
             default :
                 printf("Invalid Operation\n");
         } // end switch
-        printf("%d\n", result);
     } // end if-else
     return 0;
 }
