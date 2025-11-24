@@ -10,6 +10,6 @@ int main () {
     } // end if
     else {
         printf("Error\n");
-    } // end else5
+    } // end else
     return 0;
 } // end main
