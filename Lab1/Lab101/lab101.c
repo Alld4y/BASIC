@@ -4,13 +4,13 @@
 
 int main () {
     int N,i;
-    if(scanf("%d", &N) > 0) {
-        for (i = 0 ; i < N ; i++ ) {
+    if( scanf("%d", &N) > 0 && N > 0 ) {
+        for ( i = 0 ; i < N ; i++ ) {
             printf("Hello Loop!\n");
         } // end for
     } // end if
     else {
         printf("Error\n");
-    } // end else
+    } // end else5
     return 0;
 } // end main
