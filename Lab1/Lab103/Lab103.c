@@ -8,7 +8,7 @@ int main () {
     } else {
         switch ( operationCode ) {
             case 1 : // Addition
-            result = num1 + num2;
+                result = num1 + num2;
                 printf("%d\n", result);
                 break;
             case 2 : // Subtraction
