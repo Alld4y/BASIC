@@ -3,12 +3,12 @@
 int main () {
     int num1, num2, operationCode, result;
 
-    if ( scanf("%d %d %d", &num1, &num2, &operationCode) != 3 ) {
-        return 1; // Input Error
+    if ( scanf("%d %d %d", &num1, &num2, &operationCode) != 3 ) { // Input Error
+        return 1;
     } else {
         switch ( operationCode ) {
             case 1 : // Addition
-                result = num1 + num2;
+            result = num1 + num2;
                 printf("%d\n", result);
                 break;
             case 2 : // Subtraction
@@ -27,5 +27,6 @@ int main () {
                 printf("Invalid Operation\n");
         } // end switch
     } // end if-else  
+
     return 0;
 }
