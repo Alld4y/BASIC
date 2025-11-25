@@ -5,7 +5,7 @@ int main () {
     float consumption_kWh;
     float totalBill = 0.0;
 
-    if ( scanf("%d %f", &customerType, &consumption_kWh) != 1 ) {
+    if ( scanf("%d %f", &customerType, &consumption_kWh) != 2 ) {
         return 1;
     } else if ( customerType == 1 ) {
         if ( consumption_kWh >= 0 && consumption_kWh <=100 ) {
