@@ -23,7 +23,7 @@ int main () {
         printf("Invalid  Customer Type");
     }
 
-    if ( totalBill > 0.0 || customerType == 3 ) {
+    if ( totalBill > 0.0 ) {
         printf("%.2f\n", totalBill);
     }
 
