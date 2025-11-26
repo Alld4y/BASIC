@@ -11,6 +11,8 @@ int main() {
         return 1;
     }
 
+    printf("\n");
+
     for (i = 1; i <= N; i++) {
         if (i % 15 == 0) {
             countFizzBuzz++;
@@ -27,5 +29,6 @@ int main() {
     printf("Count Fizz (by 3 only): %d\n", countFizz);
     printf("Count Buzz (by 5 only): %d\n", countBuzz);
     printf("Count Other: %d\n", countOther);
+    
     return 0;
 }
