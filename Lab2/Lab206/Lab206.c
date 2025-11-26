@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main () {
+int main() {
     int N_MONTHS, month, successCount = 0;
     float dailyDeposit, monthlyTotal;
 
@@ -12,14 +12,14 @@ int main () {
         monthlyTotal = 0.0;
 
         if (scanf("%f", &dailyDeposit) != 1) {
-            break;
+            return 1;  // terminate instead of break
         }
 
         while (dailyDeposit != 0.00) {
             monthlyTotal += dailyDeposit;
 
             if (scanf("%f", &dailyDeposit) != 1) {
-                break;
+                return 1;  // terminate program
             }
         }
 
