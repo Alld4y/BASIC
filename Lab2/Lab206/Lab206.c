@@ -12,21 +12,21 @@ int main() {
         monthlyTotal = 0.0;
 
         if (scanf("%f", &dailyDeposit) != 1) {
-            return 1;  // terminate instead of break
+            return 1;
         }
 
         while (dailyDeposit != 0.00) {
             monthlyTotal += dailyDeposit;
 
             if (scanf("%f", &dailyDeposit) != 1) {
-                return 1;  // terminate program
+                return 1;
             }
         }
 
         printf("Month %d Total: %.2f\n", month, monthlyTotal);
 
         if (monthlyTotal >= 500.00) {
-            successCount++;
+            successCount += 1;
         }
     }
 
