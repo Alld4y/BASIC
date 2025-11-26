@@ -12,19 +12,19 @@ int main () {
     if ( planCode == 1 ) {
         if ( dataUsage_GB > 10 ) {
             totalBill = 299 + 10 * ( dataUsage_GB - 10 );
-        } else {
+        } else if ( dataUsage_GB <= 20 ) {
             totalBill = 299;
         }
     } else if ( planCode == 2 ) {;
         if ( dataUsage_GB > 20 ) {
             totalBill = 599 + 5 * ( dataUsage_GB - 20 );
-        } else {
+        } else if ( dataUsage_GB <= 20 ) {
             totalBill = 599;
         }
     }
 
     if (planCode == 1 || planCode == 2) {
-        printf("%.2f\n", totalBill);
+        printf("Total Bill: %.2f\n", totalBill);
     } else {
         printf("Invalid Plan Code\n");
     }
