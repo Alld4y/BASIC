@@ -1,28 +1,29 @@
 #include <stdio.h>
 
-int main () {
+int main() {
     int score;
     int countA = 0, countB = 0, countC = 0, countD = 0, countF = 0;
 
-    if ( scanf("%d", &score) != 1 ) {
+    if (scanf("%d", &score) != 1) {
         return 1;
     }
 
-    while ( score != -1 ) {
+    while (score != -1) {
 
-        if ( score >= 80 && score <= 100 )
+        if (score >= 80 && score <= 100) {
             countA += 1;
-        if ( score >= 70 && score < 80 )
+        } else if (score >= 70 && score < 80) {
             countB += 1;
-        if ( score >= 60 && score < 70 )
+        } else if (score >= 60 && score < 70) {
             countC += 1;
-        if ( score >= 50 && score < 60 )
+        } else if (score >= 50 && score < 60) {
             countD += 1;
-        if ( score < 50 && score >= 0 ) 
+        } else if (score >= 0 && score < 50) {
             countF += 1;
+        }
 
-        if ( scanf("%d", &score) != 1 ) {
-            break;
+        if (scanf("%d", &score) != 1) {
+            break; 
         }
     }
 
