@@ -10,14 +10,16 @@ int main () {
     }
 
     if ( planCode == 1 ) {
-        totalBill = 299;
         if ( dataUsage_GB > 10 ) {
-            totalBill = totalBill + 10 * ( dataUsage_GB - 10 );
+            totalBill = 299 + 10 * ( dataUsage_GB - 10 );
+        } else {
+            totalBill = 299;
         }
-    } else if ( planCode == 2 ) {
-        totalBill = 599;
+    } else if ( planCode == 2 ) {;
         if ( dataUsage_GB > 20 ) {
-            totalBill = totalBill + 5 * ( dataUsage_GB - 20 );
+            totalBill = 599 + 5 * ( dataUsage_GB - 20 );
+        } else {
+            totalBill = 599;
         }
     }
 
