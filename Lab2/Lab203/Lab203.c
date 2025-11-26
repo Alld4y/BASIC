@@ -11,21 +11,21 @@ int main () {
     }
 
     switch ( termCode ) {
-        case 1 : // short
+        case 1 :
             if ( investmentAmount < 5000 ) {
                 aprRate = 0.03;
             } else {
                 aprRate = 0.04;
             }
             break;
-        case 2 : // mid
+        case 2 :
             if ( investmentAmount < 10000 ) {
                 aprRate = 0.05;
             } else {
                 aprRate = 0.065;
             }
             break;
-        case 3 : // long
+        case 3 :
             aprRate = 0.08;
             break;
     }
