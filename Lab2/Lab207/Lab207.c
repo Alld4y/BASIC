@@ -15,13 +15,13 @@ int main() {
 
     for (i = 1; i <= N; i++) {
         if (i % 15 == 0) {
-            countFizzBuzz++;
+            countFizzBuzz = countFizzBuzz + 1;
         } else if (i % 3 == 0) {
-            countFizz++;
+            countFizz = countFizz + 1;
         } else if (i % 5 == 0) {
-            countBuzz++;
+            countBuzz = countBuzz + 1;
         } else {
-            countOther++;
+            countOther = countOther + 1;
         }
     }
 
@@ -32,3 +32,4 @@ int main() {
     
     return 0;
 }
+
