@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 struct Product {
     char name[50];
     int productId;
@@ -8,7 +7,6 @@ struct Product {
 
 int main () {
     struct Product item;
-
     if(scanf("%d %f %s", &item.productId, &item.price, &item.name) != 3) {
         return 1;
     }
