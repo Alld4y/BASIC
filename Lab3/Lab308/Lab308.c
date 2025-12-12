@@ -7,40 +7,37 @@ struct Campaign {
     float adSpend;        // Advertising cost
 };
 
+float getCommissionRate(int salesCount) {   // Return rate based on sales
+    if (salesCount >= 20) return 0.20;
+    if (salesCount >= 10) return 0.15;
+    return 0.10;
+}
+
 int main() {
-    int N, i;
+    int N;
+    scanf("%d", &N);      // Read number of campaigns
 
-    if (scanf("%d", &N) != 1) {  // Read number of campaigns
-        return 1;
-    }
-    struct Campaign campaigns[N]; // Array to store campaign data
+    struct Campaign campaigns[N];
 
-    for (i = 0; i < N; i++) {
-        float commissionRate = 0.0;
+    for (int i = 0; i < N; i++) {
+        float commissionRate;
         float totalRevenue;
         float totalCommission;
         float netProfitLoss;
 
-        // Read campaign data
-        if (scanf("%s %f %d %f", campaigns[i].name, &campaigns[i].productPrice, &campaigns[i].salesCount, &campaigns[i].adSpend) != 4) {
+        // Read input for each campaign
+        if (scanf("%49s %f %d %f",
+                campaigns[i].name,
+                &campaigns[i].productPrice,
+                &campaigns[i].salesCount,
+                &campaigns[i].adSpend) != 4) {
             return 1;
         }
 
-        totalRevenue = campaigns[i].salesCount * campaigns[i].productPrice;  
-        // Calculate total revenue
-
-        // Determine commission rate based on sales
-        if (campaigns[i].salesCount >= 20) {
-            commissionRate = 0.20;
-        } else if (campaigns[i].salesCount >= 10) {
-            commissionRate = 0.15;
-        } else {
-            commissionRate = 0.10;
-        }
-
-        totalCommission = totalRevenue * commissionRate; // Commission calculation
-
-        netProfitLoss = totalCommission - campaigns[i].adSpend; // Net profit/loss
+        totalRevenue = campaigns[i].salesCount * campaigns[i].productPrice;  // Total revenue
+        commissionRate = getCommissionRate(campaigns[i].salesCount);         // Determine rate
+        totalCommission = totalRevenue * commissionRate;                     // Commission amount
+        netProfitLoss = totalCommission - campaigns[i].adSpend;              // Net profit/loss
 
         // Output results
         printf("--- Campaign: %s ---\n", campaigns[i].name);
