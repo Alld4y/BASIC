@@ -9,14 +9,7 @@
 #define C_ROWS 2
 #define C_COLS 2
 
-void print_matrix(int rows, int cols, int matrix[rows][cols]) {
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            printf("%4d ", matrix[i][j]);
-        }
-        printf("\n");
-    }
-}
+void print_matrix(int rows, int cols, int matrix[rows][cols]);
 
 int main() {
     int A[A_ROWS][A_COLS];
@@ -67,4 +60,13 @@ int main() {
     printf("\nResult Matrix C (A x BT, 2x2):\n");
     print_matrix(C_ROWS, C_COLS, C);
     return 0;
+}
+
+void print_matrix(int rows, int cols, int matrix[rows][cols]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%4d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
 }

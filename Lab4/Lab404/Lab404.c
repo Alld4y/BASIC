@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 #define SIZE 5
+
 int main() {
     int numbers[SIZE];
     int even_count = 0;
